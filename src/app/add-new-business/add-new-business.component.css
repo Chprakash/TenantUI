@@ -1,0 +1,67 @@
+
+#wrapper-data {
+    display: inline-flex;
+    padding: 0;     
+  }
+  
+  #content {
+    width: 100%;
+  
+  }
+  
+  #dashboard {
+    margin-top: 20px;
+  }
+  
+
+  #content2 {
+    margin-top: 10px;
+}
+
+#addBussForm {
+    width: 50%;
+    /* background-color: #66615B; */
+    background: lightseagreen;
+    margin-top:2%;    
+    padding: 3%;
+    margin-left: 19%;
+    border-radius: 4%;
+    box-shadow:inset 0px 0px 85px rgba(0,0,0,.5);
+}
+label {
+   float: left;
+  color: white;
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: lightseagreen;
+}
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  #addBussForm[_ngcontent-c1] {
+    width: 80%;
+    background: lightseagreen;
+    margin-top: 2%;
+    padding: 3%;
+    margin-left: 0%;
+    border-radius: 4%;
+    box-shadow: inset 0px 0px 85px rgba(0,0,0,.5);
+}
+ 
+#wedage {
+  display: inline-flex;
+  padding-left: 0;
+  float: right;
+  margin-right: 0px;
+  }
+  .nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    padding-left: 0;
+}
+}

@@ -1,0 +1,23 @@
+.btn a:hover {
+    color: red !important;
+}
+
+.alert-danger{
+    color: aqua !important;
+    background-color:transparent !important;
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+.loginBox {
+    height: 500px;
+}
+
+.alert {
+    color: orange !important;
+}

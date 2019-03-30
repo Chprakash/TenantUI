@@ -1,0 +1,166 @@
+<!-- <app-navbar></app-navbar> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" id="wrapper-data">
+            <app-navbar></app-navbar>
+            <div class="" id="content">
+                <div class="containert-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <app-header></app-header>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="container"> -->
+
+
+
+                <div class="col-md-12" id="content2">
+                    <div class=" " id="addBussForm">
+                        <form id="addnewbusiness" name="addnewbusiness" #businessdata="ngForm"
+                            (ngSubmit)="addnewbusiness(businessdata.value)">
+
+                            <div class="form-group">
+                                <label>Business Name</label>
+                                <input type="text" required #businessName="ngModel"
+                                    [class.is-invalid]="businessName.invalid && businessName.touched"
+                                    name="businessName" class="form-control" id="businessName"
+                                    placeholder="Business Name" ngModel>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Business Type</label>
+                                <select required class="custom-select" #businessType="ngModel"
+                                    [class.is-invalid]="businessType.invalid && businessType.touched"
+                                    name="businessType" ngModel>
+                                    <option value="">Select</option>
+                                    <option *ngFor="let type of businessTypes" [ngValue]="type.id">{{type.typeName}}
+                                    </option>
+                                </select>
+                                <!-- <small class="text-danger" [class.d-none]="type.valid || type.untouc   hed">Please select a business type</small> -->
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label> Mobile No</label>
+                                        <input type="text" required #mobileNo="ngModel"
+                                            [class.is-invalid]="mobileNo.invalid && mobileNo.touched" name="mobileNo"
+                                            class="form-control" id="mobileNo" pattern="^((\\+91-?)|0)?[0-9]{10}$"
+                                            placeholder="Mobile No" maxlength="10" ngModel>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label>Landline No</label>
+                                        <input type="text" required #landlineNo="ngModel"
+                                            [class.is-invalid]="landlineNo.invalid && landlineNo.touched"
+                                            name="landlineNo" class="form-control" id="landlineNo"
+                                            placeholder="Landline No" ngModel>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>Contact Person Name</label>
+                                <input type="text" required #personName="ngModel"
+                                    [class.is-invalid]="personName.invalid && personName.touched" name="personName"
+                                    class="form-control" id="personName" placeholder="Person Name" ngModel>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Country</label>
+                                        <select (change)="getStates(country.value)" required class="custom-select"
+                                            #country="ngModel" [class.is-invalid]="country.invalid && country.touched"
+                                            name="Country" ngModel>
+                                            <option value="">Select</option>
+                                            <option *ngFor="let country of countries" [ngValue]="country.id">
+                                                {{country.name}}</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>State</label>
+                                        <select (change)="getCities(state.value)" required class="custom-select"
+                                            #state="ngModel" [class.is-invalid]="state.invalid && state.touched"
+                                            name="State" ngModel>
+                                            <option value="">Select</option>
+                                            <option *ngFor="let state of states" [ngValue]="state.id">{{state.name}}
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>City</label>
+                                        <select (change)="getAreas(city.value)" required class="custom-select"
+                                            #city="ngModel" [class.is-invalid]="city.invalid && city.touched"
+                                            name="City" ngModel>
+                                            <option value="">Select</option>
+                                            <option *ngFor="let city of cities" [ngValue]="city.id">{{city.name}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Area</label>
+                                        <select (change)="getZips(area.value)" required class="custom-select"
+                                            #area="ngModel" [class.is-invalid]="area.invalid && area.touched"
+                                            name="Area" ngModel>
+                                            <option value="">Select</option>
+                                            <option *ngFor="let area of areas" [ngValue]="area.id">{{area.name}}
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Address</label>
+                                <input type="text" required #address="ngModel"
+                                    [class.is-invalid]="address.invalid && address.touched" name="address"
+                                    class="form-control" id="address" placeholder="Address" ngModel>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Zip</label>
+                                        <select required class="custom-select" #zip="ngModel"
+                                            [class.is-invalid]="zip.invalid && zip.touched" name="Zip" ngModel>
+                                            <option value="">Select</option>
+                                            <option *ngFor="let zip of zips" [ngValue]="zip.id">{{zip.zipCode}}</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Landmark</label>
+                                        <input type="text" required #landmark="ngModel"
+                                            [class.is-invalid]="landmark.invalid && landmark.touched" name="LandMark"
+                                            class="form-control" placeholder="Landmark" ngModel>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button [disabled]="businessdata.form.invalid" class="btn btn-primary"
+                                type="submit">Submit</button>
+
+
+                        </form>
+
+
+
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,31 @@
+
+#wrapper-data {
+    display: inline-flex;
+    padding: 0;     
+  }
+  
+  #content {
+    width: 100%;
+  
+  }
+  
+   #dashboard {
+    margin-top: 20px;
+  } 
+  
+
+  #content2 {
+    margin-top: 10px;
+}
+
+.badge-danger {
+  color: #fff;
+  background-color: lightseagreen;
+}
+
+/* ----------------------------AG-GRID TABLE------------------------------------- */
+
+.aggrid .ag-theme-dark .ag-header-row {
+  border: none;
+  background: lightseagreen !important;
+}

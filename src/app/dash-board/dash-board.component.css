@@ -1,0 +1,70 @@
+
+
+
+#wrapper-data {
+    display: inline-flex;
+    padding: 0;     
+}
+
+#content {
+    width: 100%;
+
+}
+
+#dashboard {
+    margin-top: 20px;
+}
+
+
+.badge-danger {
+  color: #fff;
+  background-color: lightseagreen;
+}
+
+
+/* ***************HEADER********************* */
+/* 
+
+.header-wrapper{
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  #wedage {
+    display: inline-flex;
+    padding-left: 0;
+    float: right;
+    margin-right: 42px;
+  }
+  
+  .img-profile{
+    height: 34px;
+  }
+  
+  .badge-danger {
+    color: white;
+    background-color: #2A3F54;
+  }
+  
+  #wedage-wrapper
+  {
+      padding-left: 17%;
+      padding-top: 10px;
+  }
+  
+  #user-name {
+      display: inline;
+      margin-right: 5px;
+  
+  }
+ 
+  #wedage-wrapper ul a {
+      color: #2A3F54;
+  } */
+/* ***************************END HEADER********************************* */
+
+  #content2 {
+      margin-top: 10px;
+  }
+
+
+

@@ -1,0 +1,13 @@
+<div *ngIf = "data; then ifBlock; else elseBlock"></div>
+
+	<ng-template #ifBlock>
+	  Active
+	</ng-template>
+	<ng-template #elseBlock>
+	  Inactive
+	</ng-template>&nbsp;<label class="switch">
+<input (click) ="approval()" type="checkbox" [checked] = data>
+<span class="slider round"></span>
+</label>
+
+
