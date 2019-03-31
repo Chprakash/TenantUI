@@ -19,7 +19,7 @@
                     <div class=" " id="addBussForm">
                         <form id="addnewbusiness" name="addnewbusiness" #businessdata="ngForm"
                             (ngSubmit)="addnewbusiness(businessdata.value)">
-
+                        <h5>Add New Business</h5>
                             <div class="form-group">
                                 <label>Business Name</label>
                                 <input type="text" required #businessName="ngModel"
@@ -74,7 +74,7 @@
                                         <label>Country</label>
                                         <select (change)="getStates(country.value)" required class="custom-select"
                                             #country="ngModel" [class.is-invalid]="country.invalid && country.touched"
-                                            name="Country" ngModel>
+                                            name="country" ngModel>
                                             <option value="">Select</option>
                                             <option *ngFor="let country of countries" [ngValue]="country.id">
                                                 {{country.name}}</option>
@@ -85,7 +85,7 @@
                                         <label>State</label>
                                         <select (change)="getCities(state.value)" required class="custom-select"
                                             #state="ngModel" [class.is-invalid]="state.invalid && state.touched"
-                                            name="State" ngModel>
+                                            name="state" ngModel>
                                             <option value="">Select</option>
                                             <option *ngFor="let state of states" [ngValue]="state.id">{{state.name}}
                                             </option>
@@ -101,7 +101,7 @@
                                         <label>City</label>
                                         <select (change)="getAreas(city.value)" required class="custom-select"
                                             #city="ngModel" [class.is-invalid]="city.invalid && city.touched"
-                                            name="City" ngModel>
+                                            name="city" ngModel>
                                             <option value="">Select</option>
                                             <option *ngFor="let city of cities" [ngValue]="city.id">{{city.name}}
                                             </option>
@@ -111,7 +111,7 @@
                                         <label>Area</label>
                                         <select (change)="getZips(area.value)" required class="custom-select"
                                             #area="ngModel" [class.is-invalid]="area.invalid && area.touched"
-                                            name="Area" ngModel>
+                                            name="area" ngModel>
                                             <option value="">Select</option>
                                             <option *ngFor="let area of areas" [ngValue]="area.id">{{area.name}}
                                             </option>
@@ -134,7 +134,7 @@
                                     <div class="col-md-6">
                                         <label>Zip</label>
                                         <select required class="custom-select" #zip="ngModel"
-                                            [class.is-invalid]="zip.invalid && zip.touched" name="Zip" ngModel>
+                                            [class.is-invalid]="zip.invalid && zip.touched" name="zip" ngModel>
                                             <option value="">Select</option>
                                             <option *ngFor="let zip of zips" [ngValue]="zip.id">{{zip.zipCode}}</option>
                                         </select>
@@ -142,7 +142,7 @@
                                     <div class="col-md-6">
                                         <label>Landmark</label>
                                         <input type="text" required #landmark="ngModel"
-                                            [class.is-invalid]="landmark.invalid && landmark.touched" name="LandMark"
+                                            [class.is-invalid]="landmark.invalid && landmark.touched" name="landMark"
                                             class="form-control" placeholder="Landmark" ngModel>
                                     </div>
                                 </div>

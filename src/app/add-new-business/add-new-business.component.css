@@ -18,6 +18,9 @@
     margin-top: 10px;
 }
 
+h5{
+  color: white;
+}
 #addBussForm {
     width: 50%;
     /* background-color: #66615B; */

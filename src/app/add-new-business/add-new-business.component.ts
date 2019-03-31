@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LocalStorageService} from 'ngx-webstorage';
+import { Router } from '@angular/router';
 import { AddNewBusiness } from './add-new-business';
 import { BusinessTypeService } from './business-type.service';
 import { RegionService } from './region.service';
@@ -33,7 +34,7 @@ user_lname;
 
   private addNewBusiness = new AddNewBusiness('', null, null, null, '', null, null, null, null,  '', null, '');
   // tslint:disable-next-line:max-line-length
-  constructor(private businessTypeService: BusinessTypeService, private regionService: RegionService, private storage: LocalStorageService) { }
+  constructor(private router: Router, private businessTypeService: BusinessTypeService, private regionService: RegionService, private storage: LocalStorageService) { }
 
   ngOnInit() {
     this.user_fname = this.storage.retrieve('firstname');
@@ -91,8 +92,15 @@ user_lname;
         });
   }
 
-  addnewbusiness(data) {
-    console.log('Add new Business--->', data);
+  addnewbusiness(param) {
+    console.log('Add new Business--->', param);
+    this.businessTypeService.addnewbusines(param)
+    .subscribe(
+      data => {
+        console.log('Success...', data);
+        this.router.navigate(['./businessapproval']);
+      }
+    );
   }
 
 }
