@@ -1,4 +1,4 @@
 export interface IZip {
-    id: number,
-    zipCode: number
+    id: number;
+    zipCode: number;
 }

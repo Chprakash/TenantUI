@@ -15,6 +15,6 @@ data: any;
   ngOnInit() {
   }
   setmanage() {
-    alert('Button clicked..');
+    alert('Publish clicked..');
   }
 }

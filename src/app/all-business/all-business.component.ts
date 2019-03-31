@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BusinessManageComponent } from './../business-manage/business-manage.component';
+import { SettingComponent } from './setting/setting.component';
 
 @Component({
   selector: 'app-all-business',
@@ -13,9 +14,8 @@ export class AllBusinessComponent implements OnInit {
   columnDefs = [
     {headerName: 'Name', field: 'make' },
     {headerName: 'Theme', field: 'model' },
-    {headerName: 'Publish', cellRendererFramework : BusinessManageComponent
-  },
-    {headerName: 'Manage', field: 'dummy'}
+    {headerName: 'Publish', cellRendererFramework : BusinessManageComponent},
+    {headerName: 'Manage', cellRendererFramework: SettingComponent}
 ];
   rowData = [
     { make: 'Toyota', model: 'Celica', price: 35000, dummy: 'XYZ' },
