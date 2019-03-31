@@ -5,7 +5,7 @@ import { AdminregistrationComponent } from './adminregistration/adminregistratio
 import { AdminforgotComponent } from './adminforgot/adminforgot.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 // import { ApprovalComponent } from './approval/approval.component';
-import { ApplicationsComponent } from './applications/applications.component';
+// import { ApplicationsComponent } from './applications/applications.component';
 import { NavbarComponent } from './navbar/navbar.component';
 // import { SideMenuComponent } from './side-menu/side-menu.component';
 import { AddNewBusinessComponent } from './add-new-business/add-new-business.component';
@@ -16,12 +16,12 @@ import { BusinessApprovalComponent } from './business-approval/business-approval
 
 const routes: Routes = [
 {  path : '' , redirectTo : '/adminlogin' , pathMatch : 'full'},
-{  path : 'adminregistration' , component: AdminregistrationComponent },
-{  path : 'adminlogin' , component: AdminloginComponent},
-{  path : 'adminforgot' , component: AdminforgotComponent},
+{  path : 'registration' , component: AdminregistrationComponent },
+{  path : 'login' , component: AdminloginComponent},
+{  path : 'forgot' , component: AdminforgotComponent},
 {  path : 'dashboard' , component: DashBoardComponent},
 // {  path : 'approval' , component: ApprovalComponent},
-{  path : 'application' , component: ApplicationsComponent},
+// {  path : 'application' , component: ApplicationsComponent},
 {  path : 'navbar' , component: NavbarComponent},
 // {  path : 'sidemenu' , component: SideMenuComponent},
 {  path : 'addnewbusiness' , component: AddNewBusinessComponent},

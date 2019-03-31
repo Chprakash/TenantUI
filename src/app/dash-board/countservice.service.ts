@@ -8,7 +8,7 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class CountserviceService {
-  countUrl = environment.admin_baseurl + '/business/count';
+  countUrl = environment.tenant_baseurl + '/business/count';
 
   constructor(private httpclient: HttpClient) { }
 

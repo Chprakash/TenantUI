@@ -14,11 +14,11 @@ import { NgxWebstorageModule} from 'ngx-webstorage';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { LoginserviceService } from './adminlogin/loginservice.service';
 // import { ApprovalComponent } from './approval/approval.component';
-import { ApplicationsComponent } from './applications/applications.component';
+// import { ApplicationsComponent } from './applications/applications.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AgGridModule } from 'ag-grid-angular/main';
 // import { ToggleButtonComponent } from './approval/toggle-button/toggle-button.component';
-import { PublishButtonComponent } from './applications/publish-button/publish-button.component';
+// import { PublishButtonComponent } from './applications/publish-button/publish-button.component';
 import { AddNewBusinessComponent } from './add-new-business/add-new-business.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AllBusinessComponent } from './all-business/all-business.component';
@@ -37,10 +37,10 @@ import { SettingComponent } from './all-business/setting/setting.component';
     DashBoardComponent,
     // SideMenuComponent,
     // ApprovalComponent,
-    ApplicationsComponent,
+    // ApplicationsComponent,
     NavbarComponent,
     // ToggleButtonComponent,
-    PublishButtonComponent,
+    // PublishButtonComponent,
     AddNewBusinessComponent,
     PageNotFoundComponent,
     AllBusinessComponent,
@@ -57,10 +57,10 @@ import { SettingComponent } from './all-business/setting/setting.component';
     NgxSpinnerModule,
     // HttpClient,
     NgxWebstorageModule.forRoot(),
-    AgGridModule.withComponents([ ApplicationsComponent])
+    AgGridModule.withComponents([ ])
   ],
   providers: [LoginserviceService],
-  entryComponents: [ PublishButtonComponent, BusinessManageComponent, SettingComponent],
+  entryComponents: [ BusinessManageComponent, SettingComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

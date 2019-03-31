@@ -7,18 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublishButtonComponent implements OnInit {
 
-  private data : any;
-  private params : any;
+  private data: any;
+  private params: any;
   constructor() { }
 
   ngOnInit() {
   }
-  agInit(params){
-    this.params=params.data;
-    this.data=params.value;
+  agInit(params) {
+    this.params = params.data;
+    this.data = params.value;
   }
 
-  publish(){
+  publish() {
     window.open(this.params.url, '_blank');
   }
 }

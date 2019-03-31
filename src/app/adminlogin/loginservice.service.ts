@@ -14,7 +14,7 @@ import { throwError } from 'rxjs';
 })
 export class LoginserviceService {
 
-  urlapi = environment.admin_baseurl + '/users/login';
+  urlapi = environment.tenant_baseurl + '/users/login';
 
   constructor(private http: HttpClient) { }
 

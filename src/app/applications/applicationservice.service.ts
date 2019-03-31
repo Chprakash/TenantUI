@@ -7,7 +7,7 @@ import { environment } from './../../environments/environment';
   providedIn: 'root'
 })
 export class ApplicationserviceService {
-  applicationUrl = environment.admin_baseurl + '/applications';
+  applicationUrl = environment.tenant_baseurl + '/applications';
   constructor(private httpclient: HttpClient) { }
 
   getApplication(): Observable <any> {

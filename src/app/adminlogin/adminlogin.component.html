@@ -35,9 +35,9 @@
           <button [disabled]="logindata.form.invalid" class="btn" type="submit">Log in</button>
 
           <!-- <button type="submit" value="" class="btn">Log in</button> -->
-            <a [routerLink]="['/adminregistration']" class="loginOption" ><i>New User ?</i></a><br>
+            <a [routerLink]="['/registration']" class="loginOption" ><i>New User ?</i></a><br>
             <div class = "" *ngIf = "errorMessage">
-              <a [routerLink]="['/adminforgot']" class="loginOption" ><i>Forget Password</i></a>
+              <a [routerLink]="['/forgot']" class="loginOption" ><i>Forget Password</i></a>
             </div>
             <!-- <a [routerLink]="['/adminforgot']" class="loginOption" ><i>Forget Password</i></a> -->
           </form>

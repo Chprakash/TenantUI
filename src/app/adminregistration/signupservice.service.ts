@@ -10,7 +10,7 @@ import { environment } from './../../environments/environment';
 export class SignupserviceService {
 
 
-urlapi = environment.admin_baseurl + '/users';
+urlapi = environment.tenant_baseurl + '/users';
 
   constructor(private http: HttpClient) { }
 
