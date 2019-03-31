@@ -15,7 +15,7 @@ import { BusinessApprovalComponent } from './business-approval/business-approval
 
 
 const routes: Routes = [
-{  path : '' , redirectTo : '/adminlogin' , pathMatch : 'full'},
+{  path : '' , redirectTo : '/login' , pathMatch : 'full'},
 {  path : 'registration' , component: AdminregistrationComponent },
 {  path : 'login' , component: AdminloginComponent},
 {  path : 'forgot' , component: AdminforgotComponent},

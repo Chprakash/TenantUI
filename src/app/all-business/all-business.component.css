@@ -23,6 +23,10 @@
   background-color: lightseagreen;
 }
 
+.heading {
+  text-align: left;
+  margin-top: 10px;
+}
 /* ----------------------------AG-GRID TABLE------------------------------------- */
 
 .aggrid .ag-theme-dark .ag-header-row {
