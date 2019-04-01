@@ -20,6 +20,7 @@
                         <form id="addnewbusiness" name="addnewbusiness" #businessdata="ngForm"
                             (ngSubmit)="addnewbusiness(businessdata.value)">
                         <h5>Add New Business</h5>
+                        <p>{{errorMessage}}</p>
                             <div class="form-group">
                                 <label>Business Name</label>
                                 <input type="text" required #businessName="ngModel"

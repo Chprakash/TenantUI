@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApprovalStatusComponent} from './approval-status/approval-status.component';
+import { ApprovalService } from './approval.service';
+import { Approvallist } from './Approvallist';
 
 @Component({
   selector: 'app-business-approval',
@@ -6,20 +9,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./business-approval.component.css']
 })
 export class BusinessApprovalComponent implements OnInit {
+  approvalData: Approvallist[];
 
-  constructor() { }
+  constructor(private appservice: ApprovalService) { }
   columnDefs = [
-    {headerName: 'Name', field: 'make' },
-    {headerName: 'Theme', field: 'model' },
-    {headerName: 'Publish', field: 'price'},
-    {headerName: 'Manage', field: 'dummy'}
+    {headerName: 'Business Name', field: 'companyName' },
+    {headerName: 'Business Type', field: 'businessTypeName' },
+    {headerName: 'Created Date', field: 'createdDate'},
+    {headerName: 'Approved Date', field: 'apprpvedDate'},
+    {headerName: 'Approval Status', field: 'approvalStatus', cellRendererFramework: ApprovalStatusComponent }
 ];
-  rowData = [
-    { make: 'Toyota', model: 'Celica', price: 35000, dummy: 'XYZ' },
-    { make: 'Ford', model: 'Mondeo', price: 32000, dummy: 'XYZ' },
-    { make: 'Porsche', model: 'Boxter', price: 72000, dummy: 'XYZ' }
-];
+//   rowData = [
+//     { companyName: 'Toyota', businessTypeName: 'Celica', createdDate: 35000, apprpvedDate: 'XYZ', approvalStatus: 0},
+//     { companyName: 'Ford', businessTypeName: 'Mondeo', createdDate: 32000, apprpvedDate: 'XYZ', approvalStatus: 1 },
+//     { companyName: 'Porsche', businessTypeName: 'Boxter', createdDate: 72000, apprpvedDate: 'XYZ', approvalStatus: 2 }
+// ];
+
+rowData: any [] = this.approvalData;
   ngOnInit() {
+
+    this.appservice.getApproval()
+    .subscribe
+    (
+      data => {
+        this.rowData = data;
+        console.log('approvalData', this.approvalData);
+        console.log('ROWDATA-->', this.rowData);
+      }
+    );
   }
 
 }

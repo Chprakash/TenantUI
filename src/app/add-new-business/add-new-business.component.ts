@@ -17,10 +17,13 @@ import { IZip } from './zip';
   styleUrls: ['./add-new-business.component.css']
 })
 export class AddNewBusinessComponent implements OnInit {
+  errorMessage = '';
 // tslint:disable-next-line:variable-name
 user_fname;
 // tslint:disable-next-line:variable-name
 user_lname;
+// tslint:disable-next-line:variable-name
+user_fullname;
 // show = true;
 
   private businessTypes = [];
@@ -33,13 +36,15 @@ user_lname;
 
 
   private addNewBusiness = new AddNewBusiness('', null, null, null, '', null, null, null, null,  '', null, '');
+  userID: any;
   // tslint:disable-next-line:max-line-length
   constructor(private router: Router, private businessTypeService: BusinessTypeService, private regionService: RegionService, private storage: LocalStorageService) { }
 
   ngOnInit() {
-    this.user_fname = this.storage.retrieve('firstname');
-    this.user_lname = this.storage.retrieve('lastname');
-    console.log(this.user_fname);
+    this.userID = this.storage.retrieve('id');
+    // this.user_lname = this.storage.retrieve('lastname');
+    // this.user_fullname = this.user_fname + ' ' + this.user_lname ;
+    console.log('Add new full name', this.user_fullname);
 
     this.businessTypeService.getBusinessTypes()
       .subscribe(
@@ -94,13 +99,17 @@ user_lname;
 
   addnewbusiness(param) {
     console.log('Add new Business--->', param);
+    // tslint:disable-next-line:no-string-literal
+    param['userId'] = this.userID;
     this.businessTypeService.addnewbusines(param)
     .subscribe(
       data => {
         console.log('Success...', data);
         this.router.navigate(['./businessapproval']);
-      }
+      },
+      error => this.errorMessage = error.statusText
     );
+    console.log(this.errorMessage);
   }
 
 }

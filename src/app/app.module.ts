@@ -26,6 +26,7 @@ import { HeaderComponent } from './header/header.component';
 import { BusinessManageComponent } from './business-manage/business-manage.component';
 import { BusinessApprovalComponent } from './business-approval/business-approval.component';
 import { SettingComponent } from './all-business/setting/setting.component';
+import { ApprovalStatusComponent } from './business-approval/approval-status/approval-status.component';
 // import { HttpClient } from '@angular/common/http';
 
 @NgModule({
@@ -47,7 +48,8 @@ import { SettingComponent } from './all-business/setting/setting.component';
     HeaderComponent,
     BusinessManageComponent,
     BusinessApprovalComponent,
-    SettingComponent
+    SettingComponent,
+    ApprovalStatusComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +62,7 @@ import { SettingComponent } from './all-business/setting/setting.component';
     AgGridModule.withComponents([ ])
   ],
   providers: [LoginserviceService],
-  entryComponents: [ BusinessManageComponent, SettingComponent],
+  entryComponents: [ BusinessManageComponent, SettingComponent, ApprovalStatusComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

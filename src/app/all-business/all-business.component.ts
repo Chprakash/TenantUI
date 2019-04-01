@@ -14,8 +14,9 @@ export class AllBusinessComponent implements OnInit {
   columnDefs = [
     {headerName: 'Name', field: 'make' },
     {headerName: 'Theme', field: 'model' },
-    {headerName: 'Publish', cellRendererFramework : BusinessManageComponent},
-    {headerName: 'Manage', cellRendererFramework: SettingComponent}
+    {headerName: 'Manage', cellRendererFramework: SettingComponent},
+    {headerName: 'Publish', cellRendererFramework : BusinessManageComponent}
+
 ];
   rowData = [
     { make: 'Toyota', model: 'Celica', price: 35000, dummy: 'XYZ' },

@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { IBusinessType } from './business-type';
 import { environment } from './../../environments/environment';
 import { addnewbusiness } from './addnewbusiness';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +22,10 @@ export class BusinessTypeService {
   }
 
   addnewbusines(param: addnewbusiness) {
-    return this.http.post(this.url1, param);
+    return this.http.post(this.url1, param)
+    .pipe(catchError(this.errorHandler));
+  }
+  errorHandler(error: HttpErrorResponse) {
+    return throwError(error);
   }
 }
