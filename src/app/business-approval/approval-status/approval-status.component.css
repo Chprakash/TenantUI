@@ -1,5 +1,17 @@
-button {
+/* button {
     background: transparent;
     border: none;
     font-weight: bold;
+    border: 1px solid yellow;
+    background: darkcyan;
+    border-radius: 10px;
+    font-size: 13px;
+} */
+
+
+
+.btn {
+    padding: 1px;
+    font-size: 13px;
+    border-radius: 6px;
 }

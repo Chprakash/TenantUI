@@ -1,1 +1,10 @@
-<button [style.color] = 'textColor' >{{approvalStatus}} </button>
+<!-- <button [style.color] = 'textColor' >{{approvalStatus}} </button> -->
+
+<ng-template [ngIf]='display'>
+    <button [style.color] = 'textColor' class="btn btn-primary" (click)="sendrequest()" >{{approvalStatus}} </button>
+</ng-template>
+
+
+<ng-template [ngIf]='status'>
+    <span [style.color] = 'textColor'  >{{approvalStatus}} </span>
+</ng-template>

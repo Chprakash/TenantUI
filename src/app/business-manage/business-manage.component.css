@@ -1,6 +1,10 @@
 button {
     background: transparent;
-    color: lightseagreen;
-    font-weight: 700;
     border: none;
+    font-weight: bold;
+    border: 1px solid yellow;
+    background: darkcyan;
+    border-radius: 10px;
+    font-size: 13px;
+
 }

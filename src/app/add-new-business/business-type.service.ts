@@ -27,5 +27,6 @@ export class BusinessTypeService {
   }
   errorHandler(error: HttpErrorResponse) {
     return throwError(error);
+    console.log('ServiceError--', error);
   }
 }
