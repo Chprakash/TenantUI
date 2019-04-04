@@ -13,12 +13,12 @@ export class BusinessApprovalComponent implements OnInit {
 
   constructor(private appservice: ApprovalService) { }
   columnDefs = [
-    {headerName: 'Business Name', field: 'companyName', width: 300, resizable: true, cellStyle: {'text-align': 'left'}},
-    {headerName: 'Business Type', field: 'businessTypeName', widht: 280,  resizable: true, cellStyle: {'text-align': 'left'}},
-    {headerName: 'Created Date', field: 'createdDate', resizable: true, cellStyle: {'text-align': 'left'}, widht: 280},
-    {headerName: 'Approved Date', field: 'apprpvedDate', resizable: true, cellStyle: {'text-align': 'left'}, widht: 280},
+    {headerName: 'Business Name', field: 'companyName', resizable: true, cellStyle: {'text-align': 'left'}},
+    {headerName: 'Business Type', field: 'businessTypeName', resizable: true, cellStyle: {'text-align': 'left'}},
+    {headerName: 'Created Date', field: 'createdDate', resizable: true, cellStyle: {'text-align': 'left'}, },
+    {headerName: 'Approved Date', field: 'apprpvedDate', resizable: true, cellStyle: {'text-align': 'left'}},
     {headerName: 'Approval Status', field: 'approvalStatus', cellRendererFramework: ApprovalStatusComponent,
-     resizable: true, autoHeight: true, widht: 280 }
+     resizable: true, autoHeight: true }
 ];
 //   rowData = [
 //     { companyName: 'Toyota', businessTypeName: 'Celica', createdDate: 35000, apprpvedDate: 'XYZ', approvalStatus: 0},

@@ -60,23 +60,5 @@ export class AdminloginComponent implements OnInit {
     console.log(this.errorMessage);
     console.log(logdata);
 
-    // console.log('DATA FROM SERVER...' + this.id + '' + this.firsName + '' + this.lastName + '' + this.emailID);
-
-
-
-    // tslint:disable-next-line:prefer-const
-    // let email = logdata.email;
-    // tslint:disable-next-line:prefer-const
-    // let password = logdata.password;
-    // console.log(email + ' ' + password);
-
-    // if (email === 'admin' || password === '12345') {
-    //     alert('Credintional correct..');
-    //     this.router.navigate(['/dashnoard']);
-    // } else {
-    //   alert('Credintional Wrong..');
-    // }
-
-
   }
 }

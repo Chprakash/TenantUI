@@ -8,6 +8,8 @@ import { SignupserviceService } from './signupservice.service';
   styleUrls: ['./adminregistration.component.css']
 })
 export class AdminregistrationComponent implements OnInit {
+  public errorMessage = '';
+
 
   constructor(private router: Router, private Signupservice: SignupserviceService) { }
   adminobj: object = [];
@@ -23,8 +25,9 @@ export class AdminregistrationComponent implements OnInit {
       .subscribe(
         data => {
           console.log('Success...DATA FROM LOGIN' + data);
-          this.router.navigate(['./login']);
-        }
+          this.router.navigate(['./adminlogin']);
+        },
+        error => this.errorMessage = 'User Already Exist!'
       );
   }
 

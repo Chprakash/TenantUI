@@ -6,6 +6,7 @@
       <div class="loginBox">
         <img src="../../assets/user.png" class="user">
         <h2>Sign up here</h2>
+        <p>{{errorMessage}}</p>
           <form id="signupform" name="signupform" #signupdata = "ngForm" (ngSubmit)= "signup(signupdata.value)"> 
              
               <!-- <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">firstName is required</small><br> -->
