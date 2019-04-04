@@ -23,7 +23,7 @@ export class AdminregistrationComponent implements OnInit {
       .subscribe(
         data => {
           console.log('Success...DATA FROM LOGIN' + data);
-          this.router.navigate(['./adminlogin']);
+          this.router.navigate(['./login']);
         }
       );
   }
