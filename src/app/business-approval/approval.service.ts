@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'TenantUI/node_modules/rxjs';
+import { Observable } from 'rxjs';
+// import { Observable } from 'TenantUI/node_modules/rxjs';
 
 
 @Injectable({

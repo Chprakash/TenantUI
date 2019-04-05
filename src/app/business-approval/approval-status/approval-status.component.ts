@@ -38,11 +38,11 @@ agInit(param) {
       this.status = true;
   } else if ( this.testapproval === 2) {
       this.approvalStatus = 'Approved';
-      this.textColor = 'green';
+      this.textColor = 'lightgreen';
       this.status = true;
   } else if (this.testapproval === -1) {
       this.approvalStatus = 'Blocked';
-      this.textColor = 'red';
+      this.textColor = '#F94E4E';
       this.status = true;
   }
 }
@@ -54,7 +54,7 @@ agInit(param) {
     this.approvalUrl = environment.tenant_baseurl + '/businesses/';
     console.log('URL--->', this.approvalUrl);
     this.payload.tenantUserId = this.userId;
-    this.payload.businessId = this.businessData.businessTypeId;
+    this.payload.businessId = this.businessData.id;
     this.payload.businessName = this.businessData.companyName;
     this.payload.loggedInUserId = this.userId;
     console.log('payload-->', this.payload);
