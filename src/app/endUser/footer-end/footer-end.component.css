@@ -1,0 +1,108 @@
+
+/* *****************Footer background wrapper************* */
+.footer-wrapper-deeppink {
+    background-color: deeppink;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 10px;
+}
+
+.footer-wrapper-dodgerblue {
+    background-color: dodgerblue;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 10px;
+}
+
+.footer-wrapper-orangered {
+    background-color: orangered;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 10px;
+}
+
+.footer-wrapper-black {
+    background-color: black;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 10px;
+
+}
+
+/* ********************** HEADER Style(font-fmaily)****************** */
+
+.header-text-sans {
+    font-family: work sans-serif !important;
+}
+
+.header-text-cursive {
+    font-family: cursive !important;
+}
+
+.header-text-monospace {
+    font-family: monospace !important;
+}
+
+/* ********************** HEADER font color****************** */
+.Footer-red {
+    color: red !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.Footer-white {
+    color: white !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.Footer-black {
+    color: black !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.Footer-green {
+    color: green !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/* ********************** Heading font color****************** */
+.Heading-red {
+    color: red !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.Heading-white {
+    color: white !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.Heading-black {
+    color: black !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.Heading-green {
+    color: green !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+.address {
+    padding-left: 5%;
+}
+
+.map {
+    padding-right: 5%;
+}
+
+h4{
+    /* color: darkturquoise; */
+}

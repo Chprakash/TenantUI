@@ -1,0 +1,27 @@
+<div class="container-fluid" [ngClass]='dynamicfooter'>
+  <div class="row">
+      <div class="col-xs-12 col-md-6 address" [ngClass]='dynamicHeaderFontStyle' >
+            <div>
+                <h4 [ngClass]='dynamicHeadingTextColor'>Address</h4>
+            </div> 
+            <div>
+                <p  [ngClass]='dynamicFooterTextColor'>FC A1123
+                  LG colony
+                </p>
+                  
+            </div>
+            <div>
+                <h4 [ngClass]='dynamicHeadingTextColor'>Contact</h4>
+                <p  [ngClass]='dynamicFooterTextColor'><b>Email:</b> &nbsp;support@myshop.com<br>
+                <b>Phone:</b> &nbsp;02422-2545-655<br>
+                <b>Fax:</b> &nbsp;02422-2545-655
+              </p>
+            </div>
+      </div>
+      <div class="col-xs-12 col-md-6 map" [ngClass]='dynamicHeaderFontStyle' *ngIf="isMap">
+          <!-- <h4 [ngClass]='dynamicHeadingTextColor'>We Also Count In Google Map</h4> -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.2122995357513!2d73.76824321414108!3d18.609518487357235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b974bae56f41%3A0xe21b7ca276c2d775!2sAbc+Nirman+Building%2C+Kalewadi+Main+Rd%2C+Sai+Colony%2C+Thergaon%2C+Pimpri-Chinchwad%2C+Maharashtra+411033!5e0!3m2!1sen!2sin!4v1515328965002"
+               width="100%" height="230" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+  </div>
+</div>

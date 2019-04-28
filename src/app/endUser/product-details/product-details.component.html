@@ -1,0 +1,82 @@
+
+<!-- <app-navbar></app-navbar> -->
+
+<app-navbar-end></app-navbar-end>
+
+<div class="container product-wrapper">
+  <div class="row">
+    <div class="col-md-5 col-sm-6 col-xs-12">
+      <div class="" id="horiz-images">
+          
+        <!-- -----------Optinal-------------- -->
+          <div class="" id="horiz-image-menu" *ngIf="isVertical">
+              <ul class="list-inline">
+                <li class="list-inline-item">
+                  <img src="assets/bags/bag1.jpg" (click)="imageclick('bag1.jpg')">
+                </li>
+                <li class="list-inline-item1">
+                  <img src="assets/bags/bag2.jpg">
+                </li>
+                <li class="list-inline-item1">
+                  <img src="assets/bags/bag3.jpg">
+                </li>
+                <li class="list-inline-item1">
+                  <img src="assets/bags/bag4.jpg">
+                </li>
+              </ul>
+            </div>
+
+
+        <div id="product-image">
+          <img src="assets/bags/bag8.jpeg">
+          <!-- <img [src]="product_url"> -->
+        </div>
+      </div>
+        <div class="col-xs-12 image-list" *ngIf="isHorizan">
+          <div id="">
+            	
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <img src="assets/bags/bag1.jpg" (click)="imageclick('bag1.jpg')">
+              </li>
+              <li class="list-inline-item">
+                <img src="assets/bags/bag2.jpg">
+              </li>
+              <li class="list-inline-item">
+                <img src="assets/bags/bag3.jpg">
+              </li>
+              <li class="list-inline-item">
+                <img src="assets/bags/bag4.jpg">
+              </li>
+            </ul>
+
+          </div>
+        </div>
+    </div>
+    <div class="col-md-7 col-sm-6 col-xs-12">
+      <div class="product-description">
+        <div class="row">
+          <div class="col-md-12 col-xs-12">
+            <div class="product-name">
+              <h4>Head Phone of LG company</h4>
+            </div>
+          </div>
+
+          <div id="details-form">
+            <form>
+              <div id="product-details">
+                <h6><b>Description:</b></h6>
+                <div id="descrip">
+                  <p>AVINASH</p><p>Mahamune</p>
+                </div>
+                <h6><b>Price:</b></h6>
+              </div>
+            </form>
+           </div>
+          
+        </div>
+      </div> 
+      
+    </div>
+  </div>
+</div>

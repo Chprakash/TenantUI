@@ -1,0 +1,80 @@
+.btn-orange {
+    padding: 18px 8px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    width: 98%;
+    border: none;
+    float: left;
+    background: #ff9f00;
+    color: #fff;
+}
+
+
+.btn-pink {
+    padding: 18px 8px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    width: 98%;
+    border: none;
+    float: left;
+    background: deeppink;
+    color: #fff;
+}
+
+
+.btn-green {
+    padding: 18px 8px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    width: 98%;
+    border: none;
+    float: left;
+    background: darkgreen;
+    color: #fff;
+}
+
+
+.btn-gray {
+    padding: 18px 8px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    width: 98%;
+    border: none;
+    float: left;
+    background: slategrey;
+    color: #fff;
+}
+
+
+a :hover {
+    color: orangered !important;
+    }
+
+
+    .card{
+        padding: 25px;
+    }
+
+.card-body h5:hover{
+    color: mediumturquoise;
+}
+.card-body :hover {
+    color: orange;
+    text-decoration: none;
+} 
+/* 
+.card:hover{
+    transform: scale(1.2);
+}
+ */
+ img{
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+ }
+
+ .card img:hover  {
+    -webkit-transform: scale(1.3);
+	transform: scale(1.2);
+ }

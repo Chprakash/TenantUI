@@ -1,0 +1,41 @@
+
+#setting{
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 3px 4px 3px 4px blue;
+    /* max-height: 640px;
+    overflow-y: scroll;
+    position: fixed;
+    margin-left: 75%; */
+}
+
+label{
+    float: left;
+    color: blue;
+    font-size: larger;
+    font-weight: 500;
+    font-weight: 600;
+}
+
+.form-control{
+    box-shadow: 1px 1px 1px 1px blue;
+}
+input{
+    border-radius: 5px;
+    border-color: lightblue;
+}
+.upload{
+    float: left;
+    margin-top: 10px;
+}
+@media (min-width:768px) { 
+    /* big landscape tablets, laptops, and desktops */ 
+
+    #setting{
+        max-height: 640px;
+        overflow-y: scroll;
+        position: fixed;
+        margin-left: 75%;
+    }
+}

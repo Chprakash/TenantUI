@@ -25,7 +25,8 @@
                   class="ag-theme-dark"
                   [rowData]="rowData" 
                   [columnDefs]="columnDefs"
-                  >
+                  (gridReady)="onGridReady($event)">
+                  
               </ag-grid-angular>
                 </div>
               </div>

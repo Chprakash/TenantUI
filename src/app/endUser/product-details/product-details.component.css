@@ -1,0 +1,42 @@
+
+
+#product-image img {
+    height: 400px;
+    width: 65%;
+}
+
+#product-details{
+    margin-top: 30px;
+    margin-top: 30px;
+    margin-left: 4%;
+}
+
+#descrip{
+    margin-left: 100%;
+}
+
+#horiz-images{
+display: flex;
+}
+
+#horiz-image-menu{
+    margin-top: 55px;
+}
+
+.image-list ul {
+    padding: 14px;
+}
+/* -------------Horizantal small images---------------- */
+.list-inline li img{
+    height: 60px;
+    width: 69px;
+    border: 1.4px solid black;
+}
+
+/* -------------Vartical small images---------------- */
+#horiz-image-menu .list-inline li img{
+    height: 60px;
+    width: 69px;
+    border: 1.4px solid black;
+    margin-top: 10px;
+}

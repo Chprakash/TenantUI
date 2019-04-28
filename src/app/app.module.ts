@@ -28,6 +28,14 @@ import { BusinessApprovalComponent } from './business-approval/business-approval
 import { SettingComponent } from './all-business/setting/setting.component';
 import { ApprovalStatusComponent } from './business-approval/approval-status/approval-status.component';
 import { ThemeComponent } from './all-business/theme/theme.component';
+import { UserThemeComponent } from './user-theme/user-theme.component';
+
+import { FooterEndComponent } from './endUser/footer-end/footer-end.component';
+import { NavbarEndComponent } from './endUser/navbar-end/navbar-end.component';
+import { CarouselComponent } from './endUser/carousel/carousel.component';
+import { HomeComponent } from './endUser/home/home.component';
+import { ProductDetailsComponent } from './endUser/product-details/product-details.component';
+import { Product1Component } from './endUser/product1/product1.component';
 // import { HttpClient } from '@angular/common/http';
 
 @NgModule({
@@ -51,7 +59,16 @@ import { ThemeComponent } from './all-business/theme/theme.component';
     BusinessApprovalComponent,
     SettingComponent,
     ApprovalStatusComponent,
-    ThemeComponent
+    ThemeComponent,
+    UserThemeComponent,
+
+    FooterEndComponent,
+    NavbarEndComponent,
+    CarouselComponent,
+    HomeComponent,
+    NavbarEndComponent,
+    ProductDetailsComponent,
+    Product1Component
   ],
   imports: [
     BrowserModule,

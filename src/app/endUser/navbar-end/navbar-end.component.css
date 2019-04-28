@@ -1,0 +1,98 @@
+
+.navbar-expand-lg .navbar-collapse{
+    padding: 15px;
+}
+
+/* ********************** HEADER BACKGROUND****************** */
+.bg-light1 {
+    background-color: deeppink !important;
+}
+
+
+.bg-light2 {
+    background-color: dodgerblue !important;
+}
+
+
+.bg-light3 {
+    background-color: orangered !important;
+    /* font-family: cursive;
+    font-size: larger; */
+}
+
+.bg-light4 {
+    background-color: black !important;
+}
+
+
+
+/* ********************** HEADER font color****************** */
+.Header-red {
+    color: red !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.Header-white {
+    color: white !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.Header-black {
+    color: black !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.Header-green {
+    color: green !important;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+/* ********************** HEADER Style(font-fmaily)****************** */
+
+.header-text-sans {
+    font-family: work sans-serif !important;
+}
+
+.header-text-cursive {
+    font-family: cursive !important;
+}
+
+.header-text-monospace {
+    font-family: monospace !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}

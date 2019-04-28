@@ -4,6 +4,7 @@ import { SettingComponent } from './setting/setting.component';
 import { ThemeComponent } from './theme/theme.component';
 import { AllBusinessModel } from './allBusinessModel';
 import { AllbusinessService } from './allbusiness.service';
+import { LocalStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-all-business',
@@ -12,7 +13,10 @@ import { AllbusinessService } from './allbusiness.service';
 })
 export class AllBusinessComponent implements OnInit {
 approvedData: AllBusinessModel[];
-  constructor(private BusinessService: AllbusinessService) { }
+private gridApi;
+private gridColumnApi;
+
+  constructor(private BusinessService: AllbusinessService, private locstor: LocalStorageService) { }
 
   columnDefs = [
     {headerName: 'Business Name', field: 'businessName', width: 300, resizable: true, cellStyle: {'text-align': 'left'}},
@@ -33,9 +37,18 @@ approvedData: AllBusinessModel[];
     this.BusinessService.getApprovalBusiness()
       .subscribe(
         data => {
+          console.log('All-Business-->', data[0].businessId);
           this.rowData = data;
+          this.locstor.store('businessId', data[0].businessId);
         }
       );
+  }
+
+  onGridReady(params) {
+    this.gridApi = params.api;
+    this.gridColumnApi = params.columnApi;
+    console.log('gridApi', this.gridApi);
+    console.log('gridColumnApi', this.gridColumnApi);
   }
 
 }

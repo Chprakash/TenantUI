@@ -1,0 +1,187 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-9 col-sm-9  col-md-9">
+        <app-home></app-home>
+        <app-product-details></app-product-details>
+    </div>
+
+
+    <!-- -------------------Setting------------------- -->
+    <div class="col-xs-3 col-sm-3 col-md-3" id="setting">
+      <!-- -------------------Header------------------- -->
+      <div class="setting-option">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Customize Header </label>
+            <select class="form-control" (change)="setHeaderBackground($event)">
+              <option>Select Background</option>
+              <option value="pink-Header">Pink</option>
+              <option value="blue-Header">Blue</option>
+              <option value="orange-Header">Orange</option>
+              <option value="black-Header">Black</option>
+            </select>
+          </div>
+    </div>
+
+    <div class="setting-option">
+      <div class="form-group">
+          <!-- <label for="exampleFormControlSelect1">Customize Header Text Color </label> -->
+          <select class="form-control" (change)="setheaderTextColor($event)">
+            <option>Select Text Color</option>
+            <option value="Header-red">Red</option>
+            <option value="Header-white">White</option>
+            <option value="Header-black">Black</option>
+            <option value="Header-green">Green</option>
+          </select>
+        </div>
+  </div>
+
+
+  <div class="setting-option">
+    <div class="form-group">
+        <!-- <label for="exampleFormControlSelect1">Customize Header Text Color </label> -->
+        <select class="form-control" (change)="setheaderTextStyle($event)">
+          <option>Select Text Style</option>
+          <option value="header-text-sans">Style1</option>
+          <option value="header-text-cursive">Style2</option>
+          <option value="header-text-monospace">Style3</option>
+        </select>
+      </div>
+</div>
+
+<div class="setting-option">
+  <div class="form-group">
+      <!-- <label for="exampleFormControlSelect1">Customize Header Text Color </label> -->
+      <select class="form-control" (change)="setheaderLogo($event)">
+        <option>Select Logo/Company Name</option>
+        <option value = true >Logo</option>
+        <option value = false>Company Name</option>
+      </select>
+    </div>
+</div>
+<!-- {{imageUpload}} -->
+<div *ngIf ="imageUpload">
+  <label>Upload logo</label>
+  <form class="form-horizontal">
+      <div class="form-group">
+         <input type="file" (change)="onFileSelected($event)">
+         <button (click)="onUpload()" class="upload">upload</button>
+      </div>
+  </form>
+  
+</div>
+<!-- 
+<div *ngIf = "ComapnyName"> 
+  <label> Enter Company name </label>
+  <input (keyup)="onKey($event)">
+</div> -->
+
+<!-- -------------------Footrer------------------- -->
+<div class="setting-option" style="padding-top:20px">
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Customize Footer </label>
+        <select class="form-control" (change)="setFooterBackground($event)">
+          <option>Select Background</option>
+          <option value="deeppink">Pink</option>
+          <option value="dodgerblue">Blue</option>
+          <option value="orangered">Orange</option>
+          <option value="black">Black</option>
+        </select>
+      </div>
+</div>
+
+
+<div class="setting-option">
+    <div class="form-group">
+        <select class="form-control" (change)="setFooterTextColor($event)">
+          <option>Select Text color</option>
+          <option value="Footer-red">Red</option>
+          <option value="Footer-white">White</option>
+          <option value="Footer-green">Green</option>
+          <option value="Footer-black">Black</option>
+        </select>
+      </div>
+</div>
+
+<div class="setting-option">
+    <div class="form-group">
+        <select class="form-control" (change)="setFooterHeadingColor($event)">
+          <option>Select Heading color</option>
+          <option value="Heading-red">Red</option>
+          <option value="Heading-white">White</option>
+          <option value="Heading-green">Green</option>
+          <option value="Heading-black">Black</option>
+        </select>
+      </div>
+</div>
+
+<div class="setting-option">
+    <div class="form-group">
+        <!-- <label for="exampleFormControlSelect1">Customize Header Text Color </label> -->
+        <select class="form-control" (change)="setFootererTextStyle($event)">
+          <option>Select Text Style</option>
+          <option value="header-text-sans">Style1</option>
+          <option value="header-text-cursive">Style2</option>
+          <option value="header-text-monospace">Style3</option>
+        </select>
+      </div>
+</div>
+
+<div class="setting-option">
+    <div class="form-group">
+        <!-- <label for="exampleFormControlSelect1">Customize Header Text Color </label> -->
+        <select class="form-control" (change)="isMap($event)">
+          <option>Choose Map Option</option>
+          <option value="true">enable</option>
+          <option value="false">disable</option>
+        </select>
+      </div>
+</div>
+
+
+
+
+
+<div class="setting-option">
+    <div class="form-group">
+      <!-- <h3>Sub Image Option</h3> -->
+      <label>Sub Image Option</label>
+        <!-- <label for="exampleFormControlSelect1">Customize Header Text Color </label> -->
+        <select class="form-control" (change)="setsubImageOption($event)">
+          <option>Choose SubImage Option</option>
+          <option value="horizontal">horizontal</option>
+          <option value="vertical">vertical</option>
+        </select>
+      </div>
+</div>
+<button class="btn" (click)="apply()">Apply</button>
+
+<!-- <button class="btn" (click)="CSS()">Check_CSS</button> -->
+
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-9">
+      <app-product-details></app-product-details>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3" id="setting">
+
+      <div class="setting-option">
+        <div class="form-group">
+
+          <label>Sub Image Option</label>
+
+            <select class="form-control" (change)="setsubImageOption($event)">
+              <option>Choose SubImage Option</option>
+              <option value="horizontal">horizontal</option>
+              <option value="vertical">vertical</option>
+            </select>
+          </div>
+    </div>
+    </div>
+  </div>
+</div> -->
+
