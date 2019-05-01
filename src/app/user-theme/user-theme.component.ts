@@ -3,7 +3,8 @@ import { LocalStorageService } from 'ngx-webstorage';
 import { ThemeServiceService } from './theme-service.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
-import { UserThemeModal} from './UserThemeModal';
+import { ActivatedRoute} from '@angular/router';
+
 
 @Component({
   selector: 'app-user-theme',
@@ -20,6 +21,7 @@ export class UserThemeComponent implements OnInit {
   footerHeadingColor: any;
   footerTextStyle: any;
   map: any;
+  id: any;
   subImageOption: any;
   settingTheme: any = {};
   headerCSS: any = {};
@@ -31,12 +33,20 @@ export class UserThemeComponent implements OnInit {
   errorMessage: any;
   selectedFile: File = null;
   logoApi = environment.tenant_baseurl + '/logos';
+  businessId: any;
+  productTitle: any;
+  productDesc: any;
+  bodyBtn: any;
 
 
   constructor(private locstor: LocalStorageService, private themeService: ThemeServiceService,
-              private http: HttpClient) { }
+              private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
+   // tslint:disable-next-line:radix
+   this.id = parseInt(this.route.snapshot.paramMap.get('getBusinessId'));
+   this.businessId = this.id;
+   console.log('#### BUSINESS ID FROM ROUTE ', this.businessId);
 
   }
 // -------------------- Apply API call-----------------
@@ -55,8 +65,8 @@ export class UserThemeComponent implements OnInit {
     this.footerCSS.isMapEnabled = (this.locstor.retrieve('map-status'));
 
     this.settingTheme.userId = (this.locstor.retrieve('id'));
-    this.settingTheme.businessId = this.themeService.bbusinessID;
-    // this.settingTheme.businessId = '5cc3eb5c9fef1f5da4c1635e';
+    // this.settingTheme.businessId = this.themeService.getbsuinessId();
+    this.settingTheme.businessId = this.locstor.retrieve('getBussId');
 
     this.settingTheme.headerCSS = this.headerCSS;
     this.settingTheme.footerCSS = this.footerCSS;
@@ -185,6 +195,27 @@ setsubImageOption(event: any) {
   this.subImageOption = event.target.value;
   console.log('Set sub Image Option', this.subImageOption);
   this.locstor.store('sliderAlignment', this.subImageOption);
+  location.reload();
+}
+
+setProductTitle(event: any) {
+  this.productTitle = event.target.value;
+  console.log('Product Title css', this.productTitle);
+  this.locstor.store('ProdNameColor', this.productTitle);
+  location.reload();
+}
+
+setProductDesc(event: any) {
+  this.productDesc = event.target.value;
+  console.log('Product description css', this.productDesc);
+  this.locstor.store('ProdDescColor', this.productDesc);
+  location.reload();
+}
+
+setBodyBtn(event: any) {
+  this.bodyBtn = event.target.value;
+  console.log('Product description css', this.bodyBtn);
+  this.locstor.store('bodyBtn', this.bodyBtn);
   location.reload();
 }
 

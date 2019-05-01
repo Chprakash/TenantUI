@@ -20,11 +20,6 @@ export class BusinessApprovalComponent implements OnInit {
     {headerName: 'Approval Status', field: 'approvalStatus', cellRendererFramework: ApprovalStatusComponent,
      resizable: true, autoHeight: true }
 ];
-//   rowData = [
-//     { companyName: 'Toyota', businessTypeName: 'Celica', createdDate: 35000, apprpvedDate: 'XYZ', approvalStatus: 0},
-//     { companyName: 'Ford', businessTypeName: 'Mondeo', createdDate: 32000, apprpvedDate: 'XYZ', approvalStatus: 1 },
-//     { companyName: 'Porsche', businessTypeName: 'Boxter', createdDate: 72000, apprpvedDate: 'XYZ', approvalStatus: 2 }
-// ];
 
 rowData: any [] = this.approvalData;
   ngOnInit() {

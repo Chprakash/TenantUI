@@ -36,6 +36,7 @@ import { CarouselComponent } from './endUser/carousel/carousel.component';
 import { HomeComponent } from './endUser/home/home.component';
 import { ProductDetailsComponent } from './endUser/product-details/product-details.component';
 import { Product1Component } from './endUser/product1/product1.component';
+import { ProductSettingComponent } from './product-setting/product-setting.component';
 // import { HttpClient } from '@angular/common/http';
 
 @NgModule({
@@ -68,7 +69,8 @@ import { Product1Component } from './endUser/product1/product1.component';
     HomeComponent,
     NavbarEndComponent,
     ProductDetailsComponent,
-    Product1Component
+    Product1Component,
+    ProductSettingComponent
   ],
   imports: [
     BrowserModule,

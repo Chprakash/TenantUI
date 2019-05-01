@@ -57,7 +57,7 @@
       <div class="product-description">
         <div class="row">
           <div class="col-md-12 col-xs-12">
-            <div class="product-name">
+            <div class="product-name" [ngClass]='dynamicProductName'>
               <h4>Head Phone of LG company</h4>
             </div>
           </div>
@@ -65,11 +65,13 @@
           <div id="details-form">
             <form>
               <div id="product-details">
-                <h6><b>Description:</b></h6>
+                <h6 [ngClass]='dynamicProductdescription'>
+                  <b>Description:</b>
+                </h6>
                 <div id="descrip">
                   <p>AVINASH</p><p>Mahamune</p>
                 </div>
-                <h6><b>Price:</b></h6>
+                <h6 [ngClass]='dynamicProductdescription'><b>Price:</b></h6>
               </div>
             </form>
            </div>

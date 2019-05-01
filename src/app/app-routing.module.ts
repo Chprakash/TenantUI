@@ -4,10 +4,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { AdminregistrationComponent } from './adminregistration/adminregistration.component';
 import { AdminforgotComponent } from './adminforgot/adminforgot.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
-// import { ApprovalComponent } from './approval/approval.component';
-// import { ApplicationsComponent } from './applications/applications.component';
 import { NavbarComponent } from './navbar/navbar.component';
-// import { SideMenuComponent } from './side-menu/side-menu.component';
 import { AddNewBusinessComponent } from './add-new-business/add-new-business.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AllBusinessComponent } from './all-business/all-business.component';
@@ -18,6 +15,7 @@ import { CarouselComponent } from './endUser/carousel/carousel.component';
 import { HomeComponent } from './endUser/home/home.component';
 import { ProductDetailsComponent } from './endUser/product-details/product-details.component';
 import { Product1Component } from './endUser/product1/product1.component';
+import { ProductSettingComponent } from './product-setting/product-setting.component';
 
 const routes: Routes = [
 {  path : '' , redirectTo : '/login' , pathMatch : 'full'},
@@ -25,14 +23,12 @@ const routes: Routes = [
 {  path : 'login' , component: AdminloginComponent},
 {  path : 'forgot' , component: AdminforgotComponent},
 {  path : 'dashboard' , component: DashBoardComponent},
-// {  path : 'approval' , component: ApprovalComponent},
-// {  path : 'application' , component: ApplicationsComponent},
 {  path : 'navbar' , component: NavbarComponent},
-// {  path : 'sidemenu' , component: SideMenuComponent},
 {  path : 'addnewbusiness' , component: AddNewBusinessComponent},
 {  path : 'allbusiness' , component: AllBusinessComponent},
 {  path : 'businessapproval' , component: BusinessApprovalComponent},
 {  path : 'UserTheme' , component: UserThemeComponent},
+{  path : 'productSetting' , component: ProductSettingComponent},
 
 {  path : 'carsole' , component: CarouselComponent},
 {  path : 'endHome' , component: HomeComponent},

@@ -40,3 +40,41 @@ display: flex;
     border: 1.4px solid black;
     margin-top: 10px;
 }
+
+
+
+/* ---------------Product Name----------------- */
+.product-name-green{
+    color: green;
+}
+
+.product-name-orange{
+    color: orange;
+}
+
+.product-name-pink{
+    color: deeppink;
+}
+
+.product-name-blue{
+    color: blue;
+}
+
+
+/* ---------------------Product descripton-------------------- */
+
+.ProdDescription-green{
+    color: green !important;
+}
+
+.ProdDescription-orange{
+    color: orange !important;
+}
+
+.ProdDescription-pink{
+    color: deeppink;
+}
+
+.ProdDescription-blue{
+    color: blue;
+}

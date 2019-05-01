@@ -44,7 +44,6 @@ private headerTextmono = false;
   ngOnInit() {
     this.companyName = this.locstor.retrieve('companyname');
     // --------------Header Background Color---------------
-    // this.locstor.store('theme', 'blue-Header');
     this.Headercss = this.locstor.retrieve('header_background');
     console.log('selected css-->', this.Headercss);
 
@@ -138,16 +137,6 @@ private headerTextmono = false;
       }
     }
 
-    // // --------------Header LOGO---------------
-    // this.myLogo = this.locstor.retrieve('logo');
-    // console.log('selected css-->', this.myLogo);
-    // if ( this.myLogo === 'logo') {
-    //   this.isLogo = true;
-    //   this.isName = false;
-    // } else {
-    //   this.isLogo = false;
-    //   this.isName = true;
-    // }
 
     this.myLogo = this.locstor.retrieve('logo');
     console.log('selected LOgoo css-->', this.myLogo);

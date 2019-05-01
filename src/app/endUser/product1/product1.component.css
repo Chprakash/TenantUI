@@ -1,3 +1,6 @@
+
+/* ------------------Button CSS-------------------- */
+
 .btn-orange {
     padding: 18px 8px;
     border-radius: 2px;
@@ -44,22 +47,45 @@
     background: slategrey;
     color: #fff;
 }
+/* ------------------Button CSS end-------------------- */
 
+/* ------------------Card Title-------------------- */
+.card-title-green{
+    color: green;
+}
 
-a :hover {
-    color: orangered !important;
+.card-title-orange{
+    color: orange;
+}
+
+.card-title-pink{
+    color: deeppink;
+}
+
+.card-title-blue{
+    color: blue;
+}
+/* ------------------Card Title end-------------------- */
+/* 
+.card-title{
+    color: green;
+} */
+
+h6 :hover {
+    color: orange !important;
     }
 
 
-    .card{
-        padding: 25px;
+.card{
+     padding: 25px;
     }
 
 .card-body h5:hover{
     color: mediumturquoise;
 }
 .card-body :hover {
-    color: orange;
+    color: black;
+    font-weight: 600;
     text-decoration: none;
 } 
 /* 

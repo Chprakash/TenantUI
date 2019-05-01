@@ -12,12 +12,4 @@ export class BusinessPublishService {
   tenantUrl = environment.tenant_baseurl + '/businesses/' + this.userid;
   constructor(private http: HttpClient) { }
 
-
-  // adminPost(signupinfo: adminpublish ): Observable<any> {
-  //   return this.http.post(this.adminUlr, signupinfo);
-  // }
-
-  // tenantPut(signupinfo: tenantpublish ): Observable<any> {
-  //   return this.http.put(this.tenantUrl, signupinfo);
-  // }
 }

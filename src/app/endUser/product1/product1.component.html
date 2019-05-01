@@ -7,11 +7,11 @@
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="assets/bags/bag1.jpg" alt="bag1">
         <div class="card-body text-center">
-          <h5 class="card-title">Clasic bag</h5>
+          <h5 class="card-title" [ngClass]='cardTitle'>Clasic bag 1</h5>
           <div class="card-text">
             <h6>Price: <p> $ 1500</p></h6> 
           </div>
-          <a href="#" class=" btn-pink" [ngClass]='dynamicHeader'>ADD TO CART</a>
+          <a href="#" [ngClass]='dynamicButton'>ADD TO CART 1</a>
           <!-- <a href="#" class="btn btn-primary">BUY</a> -->
         </div>
       </div>
@@ -20,11 +20,11 @@
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="assets/bags/bag2.jpg" alt="bag1" [routerLink] = "['/productdetails']">
         <div class="card-body text-center">
-          <h5 class="card-title">Clasic bag</h5>
+          <h5 class="card-title" [ngClass]='cardTitle'>Clasic bag</h5>
           <div class="card-text">
             <h6>Price: <p> $ 1800</p></h6> 
           </div>
-          <a href="#" class="btn btn-green">ADD TO CART</a>
+          <a href="#" [ngClass]='dynamicButton'>ADD TO CART</a>
         </div>
       </div>
 
@@ -33,11 +33,11 @@
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="assets/bags/bag3.jpg" alt="bag1">
         <div class="card-body text-center">
-          <h5 class="card-title">Clasic bag</h5>
+          <h5 class="card-title" [ngClass]='cardTitle'>Clasic bag</h5>
           <div class="card-text">
             <h6>Price: <p> $ 2000</p></h6> 
           </div>
-          <a href="#" class="btn btn-gray">ADD TO CART</a>
+          <a href="#" [ngClass]='dynamicButton'>ADD TO CART</a>
         </div>
       </div>
     </div>
@@ -45,11 +45,11 @@
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="assets/bags/bag4.jpg" alt="bag1">
         <div class="card-body text-center">
-          <h5 class="card-title">Clasic bag</h5>
+          <h5 class="card-title" [ngClass]='cardTitle'>Clasic bag</h5>
           <div class="card-text">
             <h6>Price: <p> $ 2500</p></h6> 
           </div>
-          <a href="#" class="btn btn-orange">ADD TO CART</a>
+          <a href="#" [ngClass]='dynamicButton'>ADD TO CART 4</a>
         </div>
       </div>
     </div>

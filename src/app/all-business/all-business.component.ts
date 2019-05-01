@@ -25,11 +25,6 @@ private gridColumnApi;
     {headerName: 'Publish', cellRendererFramework : BusinessManageComponent, width: 280, resizable: true, autoHeight: true}
 
 ];
-//   rowData = [
-//     { make: 'Toyota', model: 'Celica', price: 35000, dummy: 'XYZ' },
-//     { make: 'Ford', model: 'Mondeo', price: 32000, dummy: 'XYZ' },
-//     { make: 'Porsche', model: 'Boxter', price: 72000, dummy: 'XYZ' }
-// ];
 
  rowData: any[] = this.approvedData;
 

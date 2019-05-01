@@ -57,6 +57,7 @@ defaultCssSetting() {
   this.locstor.store('footer_font_style', 'header-text-sans');
   this.locstor.store('map-Status', 'true');
   this.locstor.store('sliderAlignment', 'horizontal');
+  location.reload();
 }
 
 setCssSettingFromDB(param) {
@@ -71,6 +72,6 @@ setCssSettingFromDB(param) {
   this.locstor.store('Heading_text_color', param.footerCSS.headingTextColor);
   this.locstor.store('footer_font_style', param.footerCSS.fontStyle);
   this.locstor.store('map-Status', param.footerCSS.isMapEnabled);
-  // location.reload();
+  location.reload();
   }
 }

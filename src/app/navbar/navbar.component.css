@@ -206,12 +206,7 @@ a.article, a.article:hover {
     CONTENT STYLE
 ----------------------------------------------------- */
 #content {
-    /* padding: 20px;
-    min-height: 100vh;
-    transition: all 0.3s; */
-    /* max-width: 100%; */
-    width: 100%;
-    /* background-color: lightgrey; */
+       width: 100%;
 }
 
 

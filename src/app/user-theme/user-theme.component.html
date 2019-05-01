@@ -3,6 +3,7 @@
     <div class="col-xs-9 col-sm-9  col-md-9">
         <app-home></app-home>
         <app-product-details></app-product-details>
+        <app-product1></app-product1>
     </div>
 
 
@@ -153,6 +154,46 @@
         </select>
       </div>
 </div>
+
+<div class="setting-option">
+  <div class="form-group">
+    <!-- <h3>Sub Image Option</h3> -->
+    <label>Body Css</label>
+      <!-- <label for="exampleFormControlSelect1">Customize Header Text Color </label> -->
+      <select class="form-control" (change)="setProductTitle($event)">
+        <option>Choose Product Title</option>
+        <option value="product-name-pink">pink</option>
+        <option value="product-name-green">green</option>
+        <option value="product-name-orange">orange</option>
+        <option value="product-name-blue">blue</option>
+      </select>
+    </div>
+</div>
+
+<div class="setting-option">
+  <div class="form-group">
+      <select class="form-control" (change)="setProductDesc($event)">
+        <option>Select Heading color</option>
+        <option value="ProdDescription-pink">pink</option>
+        <option value="ProdDescription-blue">blue</option>
+        <option value="ProdDescription-green">Green</option>
+        <option value="ProdDescription-orange">orange</option>
+      </select>
+    </div>
+</div>
+
+<div class="setting-option">
+  <div class="form-group">
+      <select class="form-control" (change)="setBodyBtn($event)">
+        <option>Button</option>
+        <option value="btn-pink">pink</option>
+        <option value="btn-gray">gray</option>
+        <option value="btn-green">Green</option>
+        <option value="btn-orange">orange</option>
+      </select>
+    </div>
+</div>
+
 <button class="btn" (click)="apply()">Apply</button>
 
 <!-- <button class="btn" (click)="CSS()">Check_CSS</button> -->

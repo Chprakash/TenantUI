@@ -20,14 +20,5 @@ data: any;
   setPublish(param) {
     alert('Publish clicked..');
     console.log('PUBLISH--->', this.data);
-
-    // this.publishserive.adminPost(param)
-    // .subscribe(
-    //   data => {
-    //     console.log('Success...DATA FROM LOGIN' + data);
-    //
-    //   }
-    // );
-
   }
 }
