@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalStorageService } from 'ngx-webstorage';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-footer-end',
@@ -42,7 +42,7 @@ private HeadingTextGreen = false;
   Footercolor: any;
   Headingcolor: any;
 
-  constructor(private locstor: LocalStorageService) { }
+  constructor(private locstor: LocalStorageService , private sessStor: SessionStorageService) { }
 
   ngOnInit() {
 

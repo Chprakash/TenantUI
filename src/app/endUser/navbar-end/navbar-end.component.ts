@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalStorageService } from 'ngx-webstorage';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-navbar-end',
@@ -14,7 +14,7 @@ export class NavbarEndComponent implements OnInit {
   imageUpload: boolean;
   companyName: any;
 
-  constructor(private locstor: LocalStorageService) { }
+  constructor(private sessStorg: LocalStorageService) { }
   Headercolor: any;
 
 
@@ -42,9 +42,9 @@ private headerTextmono = false;
 
 
   ngOnInit() {
-    this.companyName = this.locstor.retrieve('companyname');
+    this.companyName = this.sessStorg.retrieve('companyname');
     // --------------Header Background Color---------------
-    this.Headercss = this.locstor.retrieve('header_background');
+    this.Headercss = this.sessStorg.retrieve('header_background');
     console.log('selected css-->', this.Headercss);
 
     switch (this.Headercss) {
@@ -76,7 +76,7 @@ private headerTextmono = false;
       // --------------HeaderTextColor---------------
 
     // this.locstor.store('Header_color','Header_red' )
-    this.Headercolor = this.locstor.retrieve('header_color');
+    this.Headercolor = this.sessStorg.retrieve('header_color');
     console.log('selected css-->', this.Headercss);
 
     switch (this.Headercolor) {
@@ -111,7 +111,7 @@ private headerTextmono = false;
      // --------------HeaderTextStyle---------------
 
     // this.locstor.store('Header_font-style', 'header-text-monospace');
-    this.fontStyle = this.locstor.retrieve('Header_font_style');
+    this.fontStyle = this.sessStorg.retrieve('Header_font_style');
     console.log('selected css-->', this.fontStyle);
 
     switch (this.fontStyle) {
@@ -138,7 +138,7 @@ private headerTextmono = false;
     }
 
 
-    this.myLogo = this.locstor.retrieve('logo');
+    this.myLogo = this.sessStorg.retrieve('logo');
     console.log('selected LOgoo css-->', this.myLogo);
     if ( this.myLogo === 'true' ) {
       this.isLogo = true;

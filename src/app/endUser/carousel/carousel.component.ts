@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-carousel',
@@ -10,6 +11,7 @@ export class CarouselComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
   call1() {
     alert('call 1');
@@ -23,4 +25,5 @@ export class CarouselComponent implements OnInit {
   call3() {
     alert('call 3');
   }
+
 }

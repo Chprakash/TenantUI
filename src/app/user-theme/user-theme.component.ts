@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LocalStorageService } from 'ngx-webstorage';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 import { ThemeServiceService } from './theme-service.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
@@ -39,7 +39,7 @@ export class UserThemeComponent implements OnInit {
   bodyBtn: any;
 
 
-  constructor(private locstor: LocalStorageService, private themeService: ThemeServiceService,
+  constructor(private locstor: LocalStorageService, private sesstor: SessionStorageService, private themeService: ThemeServiceService,
               private http: HttpClient, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -52,6 +52,7 @@ export class UserThemeComponent implements OnInit {
 // -------------------- Apply API call-----------------
   apply() {
     alert('');
+    this.locstor.retrieve('id');
     this.headerCSS.backGroundColor = (this.locstor.retrieve('header_background'));
     this.headerCSS.fontStyle = (this.locstor.retrieve('header_font_style'));
     this.headerCSS.contentTextColor = (this.locstor.retrieve('header_color'));
@@ -70,6 +71,7 @@ export class UserThemeComponent implements OnInit {
 
     this.settingTheme.headerCSS = this.headerCSS;
     this.settingTheme.footerCSS = this.footerCSS;
+    this.settingTheme.id = this.sesstor.retrieve('themeId');
 
     console.log('@@BUSINESS ID====-->',  this.settingTheme.businessId);
     console.log('Header CSS-->', this.headerCSS);

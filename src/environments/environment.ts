@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  admin_baseurl: 'https://aacdd3d0.ngrok.io/AdminService',
-  tenant_baseurl: 'https://aad48d9d.ngrok.io/TenantService'
+  admin_baseurl: 'https://cfd47208.ngrok.io/AdminService',
+  tenant_baseurl: 'https://0c9da7e1.ngrok.io/TenantService'
 };
 
 /*
