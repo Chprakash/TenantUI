@@ -41,14 +41,51 @@ private HeadingTextGreen = false;
   footercss: any;
   Footercolor: any;
   Headingcolor: any;
+  checkPublish: any;
 
   constructor(private locstor: LocalStorageService , private sessStor: SessionStorageService) { }
 
   ngOnInit() {
+    this.checkPublish = this.locstor.retrieve('publish');
 
-    this.footerMap = this.locstor.retrieve('map-status');
-    this.isMap = this.footerMap;
-    console.log('map Status check-->', this.isMap);
+    if (this.checkPublish) {
+      this.footerMap = this.sessStor.retrieve('map-status');
+      this.isMap = this.footerMap;
+      console.log('map Status check-->', this.isMap);
+      this.footercss = this.sessStor.retrieve('footer_background');
+      console.log('selected css-->', this.footercss);
+      this.fontStyle = this.sessStor.retrieve('footer_font_style');
+      console.log('selected css-->', this.fontStyle);
+      this.Footercolor = this.sessStor.retrieve('footer_text_color');
+      console.log('selected css-->', this.Footercolor);
+      this.Headingcolor = this.sessStor.retrieve('Heading_text_color');
+      console.log('selected Heading css-->', this.Headingcolor);
+    } else {
+      this.footerMap = this.locstor.retrieve('map-status');
+      this.isMap = this.footerMap;
+      console.log('map Status check-->', this.isMap);
+      this.footercss = this.locstor.retrieve('footer_background');
+      console.log('selected css-->', this.footercss);
+      this.fontStyle = this.locstor.retrieve('footer_font_style');
+      console.log('selected css-->', this.fontStyle);
+      this.Footercolor = this.locstor.retrieve('footer_text_color');
+      console.log('selected css-->', this.Footercolor);
+      this.Headingcolor = this.locstor.retrieve('Heading_text_color');
+      console.log('selected Heading css-->', this.Headingcolor);
+    }
+
+    // this.footerMap = this.locstor.retrieve('map-status');
+    // this.isMap = this.footerMap;
+    // console.log('map Status check-->', this.isMap);
+    // this.footercss = this.locstor.retrieve('footer_background');
+    // console.log('selected css-->', this.footercss);
+    // this.fontStyle = this.locstor.retrieve('footer_font_style');
+    // console.log('selected css-->', this.fontStyle);
+    // this.Footercolor = this.locstor.retrieve('footer_text_color');
+    // console.log('selected css-->', this.Footercolor);
+    // this.Headingcolor = this.locstor.retrieve('Heading_text_color');
+    // console.log('selected Heading css-->', this.Headingcolor);
+
 
     if (this.footerMap === 'true') {
       this.isMap = true;
@@ -59,8 +96,7 @@ private HeadingTextGreen = false;
 
 
     // this.locstor.store('footerBackground', 'dodgerblue');
-    this.footercss = this.locstor.retrieve('footer_background');
-    console.log('selected css-->', this.footercss);
+// ---------------------------------------------
 
     switch (this.footercss) {
       case 'deeppink': {
@@ -94,8 +130,7 @@ private HeadingTextGreen = false;
      // --------------HeaderTextStyle---------------
 
     // this.locstor.store('Header_font-style', 'header-text-monospace');
-    this.fontStyle = this.locstor.retrieve('footer_font_style');
-    console.log('selected css-->', this.fontStyle);
+    // ---------------------------------------------
 
     switch (this.fontStyle) {
       case 'header-text-sans': {
@@ -123,8 +158,7 @@ private HeadingTextGreen = false;
     // --------------FooterTextColor---------------
 
     // this.locstor.store('Footer-text-color', 'Footer-green' );
-    this.Footercolor = this.locstor.retrieve('footer_text_color');
-    console.log('selected css-->', this.Footercolor);
+   // ---------------------------------------------
 
     switch (this.Footercolor) {
       case 'Footer-red': {
@@ -157,8 +191,7 @@ private HeadingTextGreen = false;
     // --------------HeadingTextColor---------------
 
     // this.locstor.store('Heading-text-color', 'Heading-white' );
-    this.Headingcolor = this.locstor.retrieve('Heading_text_color');
-    console.log('selected Heading css-->', this.Headingcolor);
+    // ---------------------------------------------
 
     switch (this.Headingcolor) {
       case 'Heading-red': {

@@ -13,8 +13,9 @@ export class NavbarEndComponent implements OnInit {
   myLogo: any;
   imageUpload: boolean;
   companyName: any;
+  checkPublish: any;
 
-  constructor(private sessStorg: LocalStorageService) { }
+  constructor(private locStor: LocalStorageService, private sessstor: SessionStorageService) { }
   Headercolor: any;
 
 
@@ -42,10 +43,40 @@ private headerTextmono = false;
 
 
   ngOnInit() {
-    this.companyName = this.sessStorg.retrieve('companyname');
+    this.companyName = this.locStor.retrieve('companyname');
     // --------------Header Background Color---------------
-    this.Headercss = this.sessStorg.retrieve('header_background');
-    console.log('selected css-->', this.Headercss);
+    this.checkPublish = this.locStor.retrieve('publish');
+
+    if (this.checkPublish) {
+      // alert('navbar session storage');
+      this.Headercss = this.sessstor.retrieve('header_background');
+      console.log('selected css-->', this.Headercss);
+      this.Headercolor = this.sessstor.retrieve('header_color');
+      console.log('selected css-->', this.Headercss);
+      this.fontStyle = this.sessstor.retrieve('Header_font_style');
+      console.log('selected css-->', this.fontStyle);
+      this.myLogo = this.sessstor.retrieve('logo');
+      console.log('selected LOgoo css-->', this.myLogo);
+    } else {
+      // alert('navbar Local storage');
+      this.Headercss = this.locStor.retrieve('header_background');
+      console.log('selected css-->', this.Headercss);
+      this.Headercolor = this.locStor.retrieve('header_color');
+      console.log('selected css-->', this.Headercss);
+      this.fontStyle = this.locStor.retrieve('Header_font_style');
+      console.log('selected css-->', this.fontStyle);
+      this.myLogo = this.locStor.retrieve('logo');
+      console.log('selected LOgoo css-->', this.myLogo);
+    }
+
+    // this.Headercss = this.locStor.retrieve('header_background');
+    // console.log('selected css-->', this.Headercss);
+    // this.Headercolor = this.locStor.retrieve('header_color');
+    // console.log('selected css-->', this.Headercss);
+    // this.fontStyle = this.locStor.retrieve('Header_font_style');
+    // console.log('selected css-->', this.fontStyle);
+    // this.myLogo = this.locStor.retrieve('logo');
+    // console.log('selected LOgoo css-->', this.myLogo);
 
     switch (this.Headercss) {
       case 'pink-Header': {
@@ -76,9 +107,7 @@ private headerTextmono = false;
       // --------------HeaderTextColor---------------
 
     // this.locstor.store('Header_color','Header_red' )
-    this.Headercolor = this.sessStorg.retrieve('header_color');
-    console.log('selected css-->', this.Headercss);
-
+   // ------------------------------------------------
     switch (this.Headercolor) {
       case 'Header-red': {
         this.headerTextRed = true;
@@ -111,8 +140,7 @@ private headerTextmono = false;
      // --------------HeaderTextStyle---------------
 
     // this.locstor.store('Header_font-style', 'header-text-monospace');
-    this.fontStyle = this.sessStorg.retrieve('Header_font_style');
-    console.log('selected css-->', this.fontStyle);
+    // ------------------------------------------------
 
     switch (this.fontStyle) {
       case 'header-text-sans': {
@@ -138,8 +166,7 @@ private headerTextmono = false;
     }
 
 
-    this.myLogo = this.sessStorg.retrieve('logo');
-    console.log('selected LOgoo css-->', this.myLogo);
+// ------------------------------------------------
     if ( this.myLogo === 'true' ) {
       this.isLogo = true;
       this.isName = false;

@@ -25,6 +25,7 @@ export class ThemeComponent implements OnInit {
   ngOnInit() {
   }
   themeClick() {
+    this.locstor.store('publish', false);
     this.sessStor.clear();
     // this.locstor.clear('themeid');
     // this.locstor.removeItem('themeid');

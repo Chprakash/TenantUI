@@ -22,13 +22,11 @@ bussinesUrl: any;
   ngOnInit() {
   }
   setPublish(param) {
-    // alert('Publish clicked..');
+    alert('Publish clicked..');
+    this.locstor.store('publish', true);
     console.log('PUBLISH--->', this.data);
-    // this.bussinesUrl = this.data.url;
-    // console.log('bussinesUrl--->', this.bussinesUrl);
     this.locstor.store('BusinessId', this.data.businessId);
     // this.router.navigate(['/endHome']);
-    // window.open(this.bussinesUrl, '_blank');
     window.open( 'http://localhost:4200' + '/endHome', '_blank');
 
     // -------------------Get Theme API Call-------------------------
@@ -38,9 +36,9 @@ bussinesUrl: any;
     //     console.log('GetData For Settinggggggggggg', data);
     //     if (data.id === null) {
     //       this.defaultCssSetting();
-    //     } else {
+    //       } else {
     //       this.setCssSettingFromDB(data);
-    //     }
+    //       }
     //   }
     // );
 
